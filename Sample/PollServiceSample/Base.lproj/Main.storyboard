@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4511" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zG0-Cl-QEW">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3745"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - Poll Service OFF-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="Poll Service OFF" id="vXZ-lx-hvc" customClass="CCAViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ElX-ow-XHf"/>
+                        <viewControllerLayoutGuide type="bottom" id="kDJ-At-uwy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4z-be-kiI">
+                                <rect key="frame" x="133" y="224" width="55" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecf-qV-oAQ">
+                                <rect key="frame" x="111" y="390" width="99" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Stop me !">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DgY-9w-QAe" kind="push" id="BpJ-6s-PTY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="n4z-be-kiI" secondAttribute="centerY" id="1xS-m5-ne0"/>
+                            <constraint firstItem="Ecf-qV-oAQ" firstAttribute="top" secondItem="n4z-be-kiI" secondAttribute="bottom" constant="46" id="HJw-Ln-jrK"/>
+                            <constraint firstAttribute="centerX" secondItem="n4z-be-kiI" secondAttribute="centerX" id="kjq-6I-vc8"/>
+                            <constraint firstAttribute="centerX" secondItem="Ecf-qV-oAQ" secondAttribute="centerX" id="sbt-3A-UNP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rzu-Z7-Ep4"/>
+                    <connections>
+                        <outlet property="countLabel" destination="n4z-be-kiI" id="fxB-po-dX3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller - Poll Service ON-->
+        <scene sceneID="gVX-ya-hhm">
+            <objects>
+                <viewController title="Poll Service ON" id="DgY-9w-QAe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lm6-cZ-9lx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vyn-cz-lTw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8ju-fi-bwF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x5A-Q5-EFg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iko-XL-j6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gEG-qe-Gcm">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="zG0-Cl-QEW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vYT-S2-xII">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="PXs-LT-rb6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhh-Qb-FJ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
