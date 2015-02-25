@@ -60,7 +60,7 @@
 
 - (instancetype)initWithPollInterval:(NSTimeInterval)pollInterval
 {
-    self = [super init];
+    self = [self init];
     if (self) {
         _pollInterval = pollInterval;
         _shouldRunImmediately = YES;
