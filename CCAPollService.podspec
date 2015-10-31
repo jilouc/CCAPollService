@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'CCAPollService'
-  s.version = '1.0'
+  s.version = '1.1'
   s.license = 'MIT'
   s.summary = 'Wrapper around NSTimer for repeated operations, with both block and delegate API.'
   s.homepage = 'https://github.com/jilouc/CCAPollService'
