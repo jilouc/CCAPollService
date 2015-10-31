@@ -64,9 +64,11 @@
     if (self) {
         _pollInterval = pollInterval;
         _shouldRunImmediately = YES;
-        
+
+#if TARGET_OS_IOS == 1
         NSNotificationCenter *dc = [NSNotificationCenter defaultCenter];
         [dc addObserver:self selector:@selector(appDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
+#endif
     }
     return self;
 }
