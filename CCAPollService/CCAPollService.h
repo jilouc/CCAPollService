@@ -46,7 +46,9 @@
 @property (nonatomic, readonly) NSTimeInterval pollInterval;
 
 @property (nonatomic, assign) BOOL shouldFetchOnAppActive; // default YES
+#if TARGET_OS_IOS == 1
 @property (nonatomic, assign) BOOL timerShouldRunWhenUITracking; // default NO
+#endif
 @property (nonatomic, assign) BOOL shouldRunImmediately; // default YES
 
 @property (nonatomic, copy) void(^block)(id service, NSError *error);

@@ -126,9 +126,11 @@
                                                                                   userInfo:nil
                                                                                    repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+#if TARGET_OS_IOS == 1    
     if (self.timerShouldRunWhenUITracking) {
         [[NSRunLoop mainRunLoop] addTimer:timer forMode:UITrackingRunLoopMode];
     }
+#endif 
     self.serviceTimer = timer;
     
     if (self.shouldRunImmediately) {
